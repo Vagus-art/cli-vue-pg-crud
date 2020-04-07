@@ -57,7 +57,6 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import "bootstrap";
 
 @Component
 export default class Navbar extends Vue {}

@@ -12,9 +12,8 @@ export default {
   components: {
     Navbar
   }
-}
+};
 </script>
 
 <style lang="scss">
-@import "~bootstrap";
 </style>
