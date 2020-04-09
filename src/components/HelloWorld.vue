@@ -1,6 +1,6 @@
 <template>
   <h1 class="hello">
-    This is where my app begins
+    Some things happened, man.
   </h1>
 </template>
 
