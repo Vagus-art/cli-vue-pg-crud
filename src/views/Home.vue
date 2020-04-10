@@ -1,18 +1,35 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ConList :ContactsList=ContactsList />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import ConList from "@/components/ConList.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
+  data: function() {
+    return {
+      ContactsList: [
+        {
+          name: "hello",
+          phone: "world"
+        },
+        {
+          name: "agus",
+          phone: "favo"
+        }
+      ]
+    };
+  },
   components: {
-    HelloWorld
+    ConList
+  },
+  mounted:function(){
+    //this is a placeholder
+    fetch("https://pg-clean-api.herokuapp.com/api/contacts/").then(res=>res.json().then(res=>this.ContactsList=res))
   }
-}
+};
 </script>
